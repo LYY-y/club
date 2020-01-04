@@ -13,7 +13,6 @@
   <body>
     <input type="button" value="jump" onclick="x()">
   <script>
-				      
     function x() {
         location.href = "/displayServlet";
     }
