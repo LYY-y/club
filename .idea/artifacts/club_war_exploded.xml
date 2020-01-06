@@ -1,8 +1,9 @@
 <component name="ArtifactManager">
   <artifact type="exploded-war" name="club:war exploded">
-    <output-path>$PROJECT_DIR$/out/artifacts/club_war_exploded</output-path>
+    <output-path>$PROJECT_DIR$/out/artifacts/</output-path>
     <root id="root">
       <element id="javaee-facet-resources" facet="club/web/Web" />
+      <element id="javaee-facet-resources" facet="club/web/Web2" />
     </root>
   </artifact>
 </component>

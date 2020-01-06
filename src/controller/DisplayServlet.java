@@ -1,6 +1,7 @@
 package controller;
 
 import common.PageBean;
+import entity.BookModel;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -9,7 +10,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 
 @WebServlet("/displayServlet")
@@ -22,15 +22,7 @@ public class DisplayServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        List<String> list = new ArrayList<String>();
-        list.add("1");
-        list.add("2");
-        list.add("3");
-        list.add("4");
-        list.add("5");
-        list.add("6");
-        list.add("7");
-
+        List<BookModel> list = (List<BookModel>) req.getAttribute("books");
         PageBean pb = new PageBean();
         pb.setPageSize(2);
         pb.setCurrPage(0);
