@@ -7,13 +7,15 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
+
 <head>
     <title>图书管理系统</title>
 </head>
 <style>
-    h1{
+    h1 {
         text-align: center;
     }
+
     html,
     body {
         width: 100%;
@@ -21,7 +23,6 @@
         margin: 0;
         padding: 0;
     }
-
 
     input[type=button] {
         background-color: #4CAF50;
@@ -41,11 +42,13 @@
         background-color: #45a049;
     }
 
-    div{
+    div {
         text-align: center;
         justify-content: center;
     }
+
 </style>
+
 <body>
     <div style="height: 100px;"></div>
     <h1>欢迎来到北极星社团管理系统</h1>
@@ -58,9 +61,11 @@
     function jump_relogin() {
         window.location.href = "re_login.jsp";
     }
+
     function jump_login() {
         window.location.href = "login.jsp";
     }
-</script>
-</html>
 
+</script>
+
+</html>
