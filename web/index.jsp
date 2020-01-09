@@ -51,7 +51,7 @@
 
 <body>
     <div style="height: 100px;"></div>
-    <h1>欢迎来到北极星社团管理系统</h1>
+    <h1>欢迎来到 北极星社团 管理系统</h1>
     <div>
         <input id="reader" type="button" name="reader" value="游客" onclick="jump_relogin()">
         <input id="admin" type="button" name="admin" value="会员" onclick="jump_login()">
