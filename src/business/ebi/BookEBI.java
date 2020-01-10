@@ -24,8 +24,6 @@ public interface BookEBI {
     //按ISBN精确查询
     List<ActivityModel> find(String ac_no) throws DAOException;
 
-    //读者登录
-    boolean readerlogin(String reader_no, String reader_name, String reader_password) throws DAOException;
 
     //读者登录
     boolean adminlogin(String ad_no, String ad_name, String ad_password) throws DAOException;

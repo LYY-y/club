@@ -9,7 +9,7 @@
 <html>
 <head>
     <title>book_manage</title>
-    <script type="text/javascript" src="toatl.js"></script>
+    <script type="text/javascript" src="total.js"></script>
 </head>
 <style>
     html,

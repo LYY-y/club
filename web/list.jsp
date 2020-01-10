@@ -23,5 +23,5 @@
             </tr>
         </list:page>
     </table>
-</body
+</body>
 </html>

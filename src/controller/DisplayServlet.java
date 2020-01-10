@@ -22,7 +22,7 @@ public class DisplayServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        List<ActivityModel> list = (List<ActivityModel>) req.getAttribute("books");
+        List<ActivityModel> list = (List<ActivityModel>) req.getAttribute("acs");
         PageBean pb = new PageBean();
         pb.setPageSize(2);
         pb.setCurrPage(0);

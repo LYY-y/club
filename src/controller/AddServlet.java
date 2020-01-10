@@ -14,7 +14,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-@WebServlet("/addservlet")
+@WebServlet("/addServlet")
 public class AddServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
     @Override
@@ -26,18 +26,15 @@ public class AddServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setCharacterEncoding("utf-8");
         resp.setContentType("text/html;charset=utf-8");
-        String ISBN =req.getParameter("isbn");
-        String book_name =req.getParameter("book_name");
-        String book_author =req.getParameter("book_author");
-        String book_press =req.getParameter("book_press");
-        int public_year =Integer.parseInt(req.getParameter("public_year"));
-        double book_price = Double.parseDouble(req.getParameter("book_price"));
-        int book_storage =Integer.parseInt(req.getParameter("book_storage"));
-        String book_type =req.getParameter("book_type");
-        ActivityModel bm = new ActivityModel(ISBN,book_name,book_author,book_press,public_year,book_price,book_storage,book_type);
+        String ac_no =req.getParameter("ac_no");
+        String ac_name =req.getParameter("ac_name");
+        String ac_time =req.getParameter("ac_time");
+        String ac_type =req.getParameter("ac_type");
+        String ac_detail =req.getParameter("ac_detail");
+        ActivityModel ac = new ActivityModel(ac_no,ac_name,ac_time,ac_type,ac_detail);
         try {
-            if(new FactoryEBO().getBookEBO().create(bm)){
-                List<ActivityModel> list = new ArrayList<>();
+            if(new FactoryEBO().getBookEBO().create(ac)){
+                List<ActivityModel> list ;
                 list = new FactoryEBO().getBookEBO().findAll();
                 Gson gson = new Gson();
                 String jsonstr = gson.toJson(list);

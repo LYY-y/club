@@ -10,21 +10,21 @@ import java.util.List;
 
 public class BookEBO implements BookEBI {
     @Override
-    public boolean create(ActivityModel book) throws DAOException {
+    public boolean create(ActivityModel ac) throws DAOException {
         IBaseDAO bdao = new FactoryDAO().getBookDAO();
-        return bdao.create(book);
+        return bdao.create(ac);
     }
 
     @Override
-    public boolean delete(String isbn) throws DAOException {
+    public boolean delete(String ac_no) throws DAOException {
         IBaseDAO bdao = new FactoryDAO().getBookDAO();
-        return bdao.delete(isbn);
+        return bdao.delete(ac_no);
     }
 
     @Override
-    public boolean update(ActivityModel book) throws DAOException {
+    public boolean update(ActivityModel ac) throws DAOException {
         IBaseDAO bdao = new FactoryDAO().getBookDAO();
-        return bdao.update(book);
+        return bdao.update(ac);
     }
 
     @Override
@@ -40,15 +40,9 @@ public class BookEBO implements BookEBI {
     }
 
     @Override
-    public List<ActivityModel> find(String name) throws DAOException {
+    public List<ActivityModel> find(String ac_no) throws DAOException {
         IBaseDAO bdao = new FactoryDAO().getBookDAO();
-        return bdao.find(name);
-    }
-
-    @Override
-    public boolean readerlogin(String reader_no, String reader_name, String reader_password) throws DAOException {
-        IBaseDAO bdao = new FactoryDAO().getBookDAO();
-        return bdao.readerlogin(reader_no, reader_name, reader_password);
+        return bdao.find(ac_no);
     }
 
     @Override

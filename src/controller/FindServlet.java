@@ -17,10 +17,10 @@ import java.sql.Connection;
 import java.util.ArrayList;
 import java.util.List;
 
-@WebServlet("findservlet")
+
 public class FindServlet extends HttpServlet {
 
-    List<ActivityModel> books = new ArrayList();
+    List<ActivityModel> acs = new ArrayList();
     Connection dbconn = null;
     DataSource dataSource;  //声明一个数据源变量
 
@@ -33,11 +33,11 @@ public class FindServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         try {
-            books = new FactoryEBO().getBookEBO().findAll();
+            acs = new FactoryEBO().getBookEBO().findAll();
         } catch (DAOException e) {
             e.printStackTrace();
         }
-        req.setAttribute("books", books);
+        req.setAttribute("acs", acs);
         RequestDispatcher rd = req.getRequestDispatcher("/displayServlet");
         rd.forward(req,resp);
     }
