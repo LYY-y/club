@@ -53,6 +53,7 @@
 <h2>欢迎进入北极星社团管理系统，请输入身份信息！</h2>
 <div class="content">
     <form action="login" method="post">
+
         <input type="hidden" name="personstatus" value="admin">
         <label for="ad_no">账号：</label>
         <input type="text" id="ad_no" name="ad_no" placeholder="Your no..">

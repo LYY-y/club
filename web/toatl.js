@@ -142,12 +142,20 @@ function showBookList() {
     bookList.innerHTML = tab;
 }
 
-function jump_booklist() {
-    window.location.href="booklist.jsp";
+function jump_activitylist() {
+    window.location.href="activitylist";
 }
 function jump_search(){
     window.location.href="search.jsp";
 }
 function examine(type){
     document.getElementById("state").value=type;
+}
+
+function jump_member_manage() {
+    window.location.href="member_manage.jsp";
+}
+
+function jump_activity_name() {
+    window.location.href="activity_manage.jsp";
 }

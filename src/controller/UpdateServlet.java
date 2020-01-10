@@ -3,7 +3,7 @@ package controller;
 import business.factory.FactoryEBO;
 import com.google.gson.Gson;
 import dao.dao.DAOException;
-import entity.BookModel;
+import entity.ActivityModel;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -34,10 +34,10 @@ public class UpdateServlet extends HttpServlet {
         double book_price = Double.parseDouble(req.getParameter("book_price"));
         int book_storage =Integer.parseInt(req.getParameter("book_storage"));
         String book_type =req.getParameter("book_type");
-        BookModel bm = new BookModel(ISBN,book_name,book_author,book_press,public_year,book_price,book_storage,book_type);
+        ActivityModel bm = new ActivityModel(ISBN,book_name,book_author,book_press,public_year,book_price,book_storage,book_type);
         try {
             if(new FactoryEBO().getBookEBO().update(bm)){
-                List<BookModel> list = new ArrayList<>();
+                List<ActivityModel> list = new ArrayList<>();
                 list = new FactoryEBO().getBookEBO().findAll();
                 Gson gson = new Gson();
                 String jsonstr = gson.toJson(list);

@@ -31,7 +31,7 @@ public class LoginServlet extends HttpServlet {
             e.printStackTrace();
         }
         if(login){
-                RequestDispatcher dispatcher = req.getRequestDispatcher("/book_manage.jsp");
+                RequestDispatcher dispatcher = req.getRequestDispatcher("/activity_manage.jsp");
                 dispatcher.forward(req,resp);
             }else {
                 RequestDispatcher dispatcher = req.getRequestDispatcher("/login.jsp");

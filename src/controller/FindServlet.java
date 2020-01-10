@@ -2,11 +2,12 @@ package controller;
 
 import business.factory.FactoryEBO;
 import dao.dao.DAOException;
-import entity.BookModel;
+import entity.ActivityModel;
 
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -16,9 +17,10 @@ import java.sql.Connection;
 import java.util.ArrayList;
 import java.util.List;
 
+@WebServlet("findservlet")
 public class FindServlet extends HttpServlet {
 
-    List<BookModel> books = new ArrayList();
+    List<ActivityModel> books = new ArrayList();
     Connection dbconn = null;
     DataSource dataSource;  //声明一个数据源变量
 

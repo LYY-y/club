@@ -3,7 +3,7 @@ package controller;
 import business.factory.FactoryEBO;
 import com.google.gson.Gson;
 import dao.dao.DAOException;
-import entity.BookModel;
+import entity.ActivityModel;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -28,7 +28,7 @@ public class DeleteServlet extends HttpServlet {
         String value = req.getParameter("value");
         try {
             if(new FactoryEBO().getBookEBO().delete(value)){
-                List<BookModel> list = new ArrayList<>();
+                List<ActivityModel> list = new ArrayList<>();
                 list = new FactoryEBO().getBookEBO().findAll();
                 Gson gson = new Gson();
                 String jsonstr = gson.toJson(list);

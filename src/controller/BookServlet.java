@@ -2,7 +2,7 @@ package controller;
 
 import business.factory.FactoryEBO;
 import dao.dao.DAOException;
-import entity.BookModel;
+import entity.ActivityModel;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -30,23 +30,23 @@ public class BookServlet extends HttpServlet {
             resp.setContentType("text/html;charset=utf-8");
             String state = req.getParameter("state");
             String value;
-            List<BookModel> books = new ArrayList();
+            List<ActivityModel> books = new ArrayList();
             if( "1".equals(state)){
                 value = req.getParameter("value");
                 books = new FactoryEBO().getBookEBO().find(value);
                 req.setAttribute("books",books);
-                RequestDispatcher rd = req.getRequestDispatcher("re_showbook.jsp");
+                RequestDispatcher rd = req.getRequestDispatcher("showActivity.jsp");
                 rd.forward(req,resp);
             }else if("2".equals(state)){
                 value = req.getParameter("value");
                 books = new FactoryEBO().getBookEBO().findSome(value);
                 req.setAttribute("books",books);
-                RequestDispatcher rd = req.getRequestDispatcher("re_showbook.jsp");
+                RequestDispatcher rd = req.getRequestDispatcher("showActivity.jsp");
                 rd.forward(req,resp);
             }else if("3".equals(state)) {
                 books = new FactoryEBO().getBookEBO().findAll();
                 req.setAttribute("books", books);
-                RequestDispatcher rd = req.getRequestDispatcher("re_showbook.jsp");
+                RequestDispatcher rd = req.getRequestDispatcher("showActivity.jsp");
                 rd.forward(req,resp);
             }else if("4".equals(state)){
                 books = new FactoryEBO().getBookEBO().findAll();

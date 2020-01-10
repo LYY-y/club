@@ -4,13 +4,13 @@ import business.ebi.BookEBI;
 import dao.dai.IBaseDAO;
 import dao.dao.DAOException;
 import dao.factory.FactoryDAO;
-import entity.BookModel;
+import entity.ActivityModel;
 
 import java.util.List;
 
 public class BookEBO implements BookEBI {
     @Override
-    public boolean create(BookModel book) throws DAOException {
+    public boolean create(ActivityModel book) throws DAOException {
         IBaseDAO bdao = new FactoryDAO().getBookDAO();
         return bdao.create(book);
     }
@@ -22,25 +22,25 @@ public class BookEBO implements BookEBI {
     }
 
     @Override
-    public boolean update(BookModel book) throws DAOException {
+    public boolean update(ActivityModel book) throws DAOException {
         IBaseDAO bdao = new FactoryDAO().getBookDAO();
         return bdao.update(book);
     }
 
     @Override
-    public List<BookModel> findAll() throws DAOException {
+    public List<ActivityModel> findAll() throws DAOException {
         IBaseDAO bdao = new FactoryDAO().getBookDAO();
         return bdao.findAll();
     }
 
     @Override
-    public List<BookModel> findSome(String name) throws DAOException {
+    public List<ActivityModel> findSome(String name) throws DAOException {
         IBaseDAO bdao = new FactoryDAO().getBookDAO();
         return bdao.findSome(name);
     }
 
     @Override
-    public List<BookModel> find(String name) throws DAOException {
+    public List<ActivityModel> find(String name) throws DAOException {
         IBaseDAO bdao = new FactoryDAO().getBookDAO();
         return bdao.find(name);
     }

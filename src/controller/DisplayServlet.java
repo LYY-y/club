@@ -1,7 +1,7 @@
 package controller;
 
 import common.PageBean;
-import entity.BookModel;
+import entity.ActivityModel;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -22,7 +22,7 @@ public class DisplayServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        List<BookModel> list = (List<BookModel>) req.getAttribute("books");
+        List<ActivityModel> list = (List<ActivityModel>) req.getAttribute("books");
         PageBean pb = new PageBean();
         pb.setPageSize(2);
         pb.setCurrPage(0);
