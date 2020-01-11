@@ -9,6 +9,7 @@
 <html>
 <head>
     <title>Search</title>
+    <script type="text/javascript" src="total.js"></script>
 </head>
 <style>
     html,body{
@@ -72,8 +73,3 @@
         </div>
     </body>
 </html>
-<script>
-    function examine(type){
-        document.getElementById("state").value=type;
-    }
-</script>

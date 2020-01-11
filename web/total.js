@@ -56,7 +56,7 @@ function delete_ac(pos){
         if (xmlHttp.readyState ==4){
             if (xmlHttp.status == 200){
                 showBookList();
-                document.getElementById('activityListSpan').style.display='block'
+                document.getElementById('activityListSpan').style.display='block';
             }else {
                 alert("删除活动记录错误！");
             }
@@ -133,9 +133,6 @@ function showBookList() {
     document.getElementById('activityList').innerHTML = tab;
 }
 
-function jump_activityList() {
-    window.location.href="activity_list";
-}
 function jump_search(){
     window.location.href="search.jsp";
 }

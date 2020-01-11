@@ -51,7 +51,7 @@ public class ActivityServlet extends HttpServlet {
             }else if("4".equals(state)){
                 acs = new FactoryEBO().getBookEBO().findAll();
                 req.setAttribute("acs", acs);
-                RequestDispatcher rd = req.getRequestDispatcher("activity_list.jsp");
+                RequestDispatcher rd = req.getRequestDispatcher("ad_showActivity.jsp");
                 rd.forward(req,resp);
             }
 

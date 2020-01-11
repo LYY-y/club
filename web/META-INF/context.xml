@@ -1,14 +1,14 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Context reloadable = "true">
-    <Resource
-        name="jdbc/dataSource"
-        type="javax.sql.DataSource"
-        maxActive="4"
-        maxIdle="2"
-        maxWait="1000"
-        url="jdbc:mysql://localhost/club"
-        driverClassName="com.mysql.cj.jdbc.Driver"
-        username="root"
-        password="3218004211lyy" />
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<Context reloadable = "true">-->
+<!--    <Resource-->
+<!--        name="jdbc/dataSource"-->
+<!--        type="javax.sql.DataSource"-->
+<!--        maxActive="4"-->
+<!--        maxIdle="2"-->
+<!--        maxWait="1000"-->
+<!--        url="jdbc:mysql://localhost/club"-->
+<!--        driverClassName="com.mysql.cj.jdbc.Driver"-->
+<!--        username="root"-->
+<!--        password="3218004211lyy" />-->
 
-</Context>
+<!--</Context>-->

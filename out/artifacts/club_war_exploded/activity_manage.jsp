@@ -1,15 +1,8 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: hp
-  Date: 2019/12/19
-  Time: 17:46
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8"  %>
 <html>
 <head>
     <title>book_manage</title>
-    <script type="text/javascript" src="toatl.js"></script>
+    <script type="text/javascript" src="total.js"></script>
 </head>
 <style>
     html,
@@ -56,10 +49,10 @@
 </style>
 
 <body>
-<form action="bookservlet" method="post">
+<form action="activityServlet" method="post">
     <div style="height:12px"></div>
     <div>
-        <input id="add" type="button" name="add" value="增添活动" onclick="jump_activitylist()">
+        <input id="add" type="button" name="add" value="增添活动" onclick="jump_activityList()">
         <input id="delete" type="submit" name="delete" value="删除活动" onclick="examine(4)">
         <input id="update" type="submit" name="update" value="修改活动" onclick="examine(4)">
         <input id="search" type="button" name="search" value="查询活动记录" onclick="jump_search()">
@@ -67,4 +60,10 @@
     </div>
 </form>
 </body>
+<script>
+    function jump_activityList() {
+        window.location.href="activity_list.jsp";
+    }
+</script>
+
 </html>

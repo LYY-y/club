@@ -60,4 +60,10 @@
     </div>
 </form>
 </body>
+<script>
+    function jump_activityList() {
+        window.location.href="activity_list.jsp";
+    }
+</script>
+
 </html>

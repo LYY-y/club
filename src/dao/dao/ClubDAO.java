@@ -1,6 +1,7 @@
 package dao.dao;
 
 
+import common.DBConnection;
 import dao.dai.IBaseDAO;
 import entity.ActivityModel;
 
@@ -18,7 +19,7 @@ public class ClubDAO implements IBaseDAO {
         // 此处的资源指得是那些必须在程序结束时必须关闭的资源（比如数据库连接，网络连接等），
         // try语句在该语句结束时自动关闭这些资源。这种称为try-with-resources语句。
 
-        try (Connection conn = getConnecton();
+        try (Connection conn = new DBConnection().getConn();
              PreparedStatement pstmt = conn.prepareStatement(sql))
         {
             pstmt.setString(1, ac.getAc_no());
@@ -42,7 +43,7 @@ public class ClubDAO implements IBaseDAO {
 
         String sql = "DELETE FROM activity WHERE ac_no = ?";
 
-        try (Connection conn = getConnecton();
+        try (Connection conn = new DBConnection().getConn();
              PreparedStatement pstmt = conn.prepareStatement(sql))
         {
             pstmt.setString(1,ac_no);
@@ -62,7 +63,7 @@ public class ClubDAO implements IBaseDAO {
 
         String sql = "update activity set ac_no = ?, ac_name = ?, ac_time = ?, ac_type = ?, " +
                 "ac_detail = ? where ac_no = ?";
-        try (Connection conn = getConnecton();
+        try (Connection conn = new DBConnection().getConn();
              PreparedStatement pstmt = conn.prepareStatement(sql))
         {
             pstmt.setString(1, ac.getAc_no());
@@ -86,7 +87,7 @@ public class ClubDAO implements IBaseDAO {
         ActivityModel ac = null;
         List<ActivityModel> list = new ArrayList<>();
         String sql = "select * from activity";
-        try (Connection conn = getConnecton();
+        try (Connection conn = new DBConnection().getConn();
              Statement stmt =conn.createStatement();)
         {
             rs = stmt.executeQuery(sql);
@@ -110,7 +111,7 @@ public class ClubDAO implements IBaseDAO {
         ActivityModel ac = null;
         List<ActivityModel> list = new ArrayList<>();
         String sql = "select * from activity where ac_name like ?";
-        try (Connection conn = getConnecton();
+        try (Connection conn = new DBConnection().getConn();
              PreparedStatement pstmt = conn.prepareStatement(sql))
         {
             pstmt.setString(1, "%"+name+"%");
@@ -135,7 +136,7 @@ public class ClubDAO implements IBaseDAO {
         ActivityModel ac = null;
         List<ActivityModel> list = new ArrayList<>();
         String sql = "select* from activity where ac_no = ?";
-        try (Connection conn = getConnecton();
+        try (Connection conn = new DBConnection().getConn();
              PreparedStatement pstmt = conn.prepareStatement(sql))
         {
             pstmt.setString(1, ac_no);
@@ -162,7 +163,7 @@ public class ClubDAO implements IBaseDAO {
         String sql = "select no , name, password from login where no = ?";
         ResultSet rs =null;
         boolean flag = false;
-        try (Connection conn = getConnecton();
+        try (Connection conn = new DBConnection().getConn();
              PreparedStatement pstmt = conn.prepareStatement(sql))
         {;
             pstmt.setString(1, ad_no);
