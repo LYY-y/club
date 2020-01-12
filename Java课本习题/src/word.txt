@@ -1,0 +1,2 @@
+音乐 music 舞蹈 dance 小汽车 car 卡车 truck
+男人 man 女人 woman 男孩 boy 女孩 girl

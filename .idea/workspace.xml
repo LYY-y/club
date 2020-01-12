@@ -216,7 +216,7 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="37" />
     <option name="width" value="980" />
     <option name="height" value="1040" />
@@ -451,15 +451,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1578613425889</updated>
-      <workItem from="1578613433651" duration="22821000" />
+      <workItem from="1578613433651" duration="22972000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22821000" />
+    <option name="totallyTimeSpent" value="22972000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
       <window_info id="Image Layers" order="0" />
       <window_info id="Capture Tool" order="1" />
